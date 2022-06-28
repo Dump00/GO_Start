@@ -4,44 +4,27 @@ import "fmt"
 
 func main() {
 
-	// strings
+	name := "cisco"
+	age := 30
 
-	var nameOne string = "cisco"
-	var nameTwo = "golang"
-	var nameThree string
-	nameThree = "Hello"
-	// following shorthand method can not be used outside the functions
-	nameFour := "World"
+	// print
+	fmt.Print("Hello")
+	fmt.Print("World \n")
+	fmt.Print("newLine \n")
 
-	fmt.Println(nameOne)
-	fmt.Println(nameTwo)
-	fmt.Println(nameThree)
-	fmt.Println(nameFour)
+	fmt.Println("Golang")
 
-	// ints
+	fmt.Println("My name is", name, "and my age is", age)
 
-	var ageOne int = 20
-	var ageTwo = 30
-	ageThree := 40
+	// %_ format specifier
 
-	fmt.Println(ageOne)
-	fmt.Println(ageTwo)
-	fmt.Println(ageThree)
+	fmt.Printf("My age is %v and my name is %v \n", age, name)
+	fmt.Printf("My age is %v and my name is %q \n", age, name)
+	fmt.Printf("age is of type %T \n", age)
+	fmt.Printf("you scored %f \n", 255.55)
+	fmt.Printf("you scored %0.1f \n", 255.55)
 
-	// bits & memory
-
-	var numOne int8 = 25
-	var numTwo uint = 255
-	fmt.Println(numOne)
-	fmt.Println(numTwo)
-
-	// float
-
-	var scoreOne float32 = 1.34
-	var scoreTwo float64 = 25787367783789.9879
-	scoreThree := 1.5
-	fmt.Println(scoreOne)
-	fmt.Println(scoreTwo)
-	fmt.Println(scoreThree)
-
+	// Sprintf (save formatted strings)
+	var str = fmt.Sprintf("My age is %v and my name is %v \n", age, name)
+	fmt.Println("The saved string is:", str)
 }
